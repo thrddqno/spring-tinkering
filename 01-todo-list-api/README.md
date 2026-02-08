@@ -65,4 +65,5 @@ Ensure these keys are present in your `application.properties` or `system enviro
 | -------------- | --------------------------- |
 | JWT_SECRET_KEY | 256-bit key for JWT signing |
 
-A solution for [Todo list API](https://roadmap.sh/projects/todo-list-api) project from roadmap.sh
+A solution for Todo List API project from roadmap.sh
+https://roadmap.sh/projects/todo-list-api
