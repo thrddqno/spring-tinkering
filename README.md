@@ -9,6 +9,7 @@ To finish these challenges, I will have to finish 5 beginner-level projects, 3 i
 | Project                           | Difficulty       | Type | Description                                                    | Roadmap.sh Project URL | 
 | --------------------------------- | ---------------- | ---- | -------------------------------------------------------------- |-----------------------|
 | [Todo list API](01-todo-list-api) | `beginner-level` | API  | Build a RESTful API to allow users to manage their to-do list. |[Todo list API](https://roadmap.sh/projects/todo-list-api)|
+| [Expense Tracker](02-expense-tracker)|  `beginner-level`| API | Build an API for an expense tracker application. | [Expense Tracker API](https://roadmap.sh/projects/expense-tracker-api)
 
 ## Learning Goals
 
