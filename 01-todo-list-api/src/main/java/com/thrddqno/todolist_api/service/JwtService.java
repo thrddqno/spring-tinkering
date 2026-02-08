@@ -25,7 +25,7 @@ public class JwtService {
 	private String JWT_SECRET;
 
 	public String extractEmail(String token) {
-		return extractClaim(token, claim -> claim.get("email", String.class));
+		return extractClaim(token, Claims::getSubject);
 	}
 	
 	public <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
