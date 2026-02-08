@@ -2,9 +2,6 @@
 
 In this project, I am required to develop a RESTful API to allow users to manage their to-do list.
 
-A project from roadmap.sh.
-https://roadmap.sh/projects/todo-list-api
-
 ## ⚙️ Tech Stack
 
 - **Runtime:** Java 21 / Spring Boot 3.4+
@@ -67,3 +64,5 @@ Ensure these keys are present in your `application.properties` or `system enviro
 | Key            | Description                 |
 | -------------- | --------------------------- |
 | JWT_SECRET_KEY | 256-bit key for JWT signing |
+
+A solution for [Todo list API](https://roadmap.sh/projects/todo-list-api) project from roadmap.sh
