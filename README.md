@@ -1,9 +1,9 @@
 # spring-tinkering
 
-A multi-module project containing all my attempt at [Backend Project Ideas](https://roadmap.sh/backend/projects) from `roadmap.sh`
+A repo containing all my attempts at [Backend Project Ideas](https://roadmap.sh/backend/projects) from `roadmap.sh`
 
 ## Projects
-To finish this multi-module project, I will have to finish 5 beginner-level projects, 3 intermediate-level projects, and 2 advanced-level projects.
+To finish these challenges, I will have to finish 5 beginner-level projects, 3 intermediate-level projects, and 2 advanced-level projects.
 
 | Project | Difficulty | Type | Description |
 |---------|------------|------|-------------|
