@@ -3,14 +3,17 @@
 A repo containing all my attempts at [Backend Project Ideas](https://roadmap.sh/backend/projects) from `roadmap.sh`
 
 ## Projects
+
 To finish these challenges, I will have to finish 5 beginner-level projects, 3 intermediate-level projects, and 2 advanced-level projects.
 
-| Project | Difficulty | Type | Description |
-|---------|------------|------|-------------|
-|[Todo list API](link.com)|`beginner-level`|API|Build a RESTful API to allow users to manage their to-do list.|
+| Project                                                                                  | Difficulty       | Type | Description                                                    |
+| ---------------------------------------------------------------------------------------- | ---------------- | ---- | -------------------------------------------------------------- |
+| [Todo list API](https://github.com/thrddqno/spring-tinkering/tree/main/01-todo-list-api) | `beginner-level` | API  | Build a RESTful API to allow users to manage their to-do list. |
 
 ## Learning Goals
+
 By finishing this multi-module journey, I aim to:
+
 - Develop strong fundamentals in REST API design, data modeling, validation, and error handling
 - Learn to structure clean, maintainable, and scalable backend systems using proper architecture
 - Progress from simple CRUD applications to production-style systems with authentication, modularization, and system design thinking
