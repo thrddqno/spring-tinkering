@@ -1,8 +1,9 @@
-# 📋 [TodoList API](https://roadmap.sh/projects/todo-list-api)
+# 📋 TodoList API
 
 In this project, I am required to develop a RESTful API to allow users to manage their to-do list.
 
 A project from roadmap.sh.
+https://roadmap.sh/projects/todo-list-api
 
 ## ⚙️ Tech Stack
 
