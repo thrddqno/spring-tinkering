@@ -1,6 +1,6 @@
 # 📋 TodoList API
 
-In this project, I am required to develop a RESTful API to allow users to manage their to-do list.
+In this project, I am required to develop a RESTful API to allow users to manage their to-do list
 
 ## ⚙️ Tech Stack
 
