@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: expense-tracker-api
+  datasource:
+    url: jdbc:postgresql://localhost:5432/expense-tracker-api_db
+    username: postgres
+    password: password
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
