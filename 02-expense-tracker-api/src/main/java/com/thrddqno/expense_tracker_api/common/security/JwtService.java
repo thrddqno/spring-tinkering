@@ -44,11 +44,11 @@ public class JwtService {
 	
 	public String generateToken(Map<String, Object> claims, User user) {
 		return Jwts.builder()
-				.addClaims(claims)
+				.setClaims(claims)
 				.setSubject(user.getEmail())
 				.setIssuedAt(new Date(System.currentTimeMillis()))
 				.setExpiration(new Date(System.currentTimeMillis() + 1000 * 64 * 24)) // 24 hours
-				.signWith(getSigningKey(), SignatureAlgorithm.ES256)
+				.signWith(getSigningKey(), SignatureAlgorithm.HS256)
 				.compact();
 	}
 	
