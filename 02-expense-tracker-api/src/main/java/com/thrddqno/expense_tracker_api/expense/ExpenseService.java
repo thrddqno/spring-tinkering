@@ -8,8 +8,11 @@ import com.thrddqno.expense_tracker_api.expense.dto.PagedExpenseResponse;
 import com.thrddqno.expense_tracker_api.user.User;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cglib.core.Local;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
 
 @Service
 @RequiredArgsConstructor
@@ -20,9 +23,25 @@ public class ExpenseService {
     private final CategoryRepository categoryRepository;
 
     //get
-    public PagedExpenseResponse<ExpenseResponse> getExpense(User user, int page, int size){
+    public PagedExpenseResponse<ExpenseResponse> getExpense(User user, int page, int size, String filter, LocalDate customStart, LocalDate customEnd){
         PageRequest request = PageRequest.of(page - 1, size);
-        return expenseMapper.toPagedExpenseResponse(expenseRepository.findAllByUser(user, request));
+
+        LocalDate startDate;
+        LocalDate endDate = LocalDate.now();
+
+        switch (filter.toLowerCase()) {
+            case "week" -> startDate = endDate.minusWeeks(1);
+            case "month" -> startDate = endDate.minusMonths(1);
+            case "3months" -> startDate = endDate.minusMonths(3);
+            case "custom" -> {
+                if (customStart == null || customEnd == null) throw new IllegalArgumentException("Custom filter requires start and end dates");
+                startDate = customStart;
+                endDate = customEnd;
+            }
+            default -> startDate = LocalDate.of(1970, 1, 1);
+        }
+
+        return expenseMapper.toPagedExpenseResponse(expenseRepository.findAllByUserAndExpenseDateBetween(user, startDate, endDate ,request));
     }
 
     //post

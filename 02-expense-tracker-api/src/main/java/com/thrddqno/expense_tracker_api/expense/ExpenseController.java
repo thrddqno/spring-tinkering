@@ -9,6 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+
 @RestController
 @RequestMapping("/api/expenses")
 @RequiredArgsConstructor
@@ -17,8 +19,19 @@ public class ExpenseController {
     private final ExpenseService expenseService;
 
     @GetMapping
-    public ResponseEntity<PagedExpenseResponse<ExpenseResponse>> getExpense(@AuthenticationPrincipal User user, @RequestParam int page, @RequestParam int size){
-        return ResponseEntity.ok(expenseService.getExpense(user, page, size));
+    public ResponseEntity<PagedExpenseResponse<ExpenseResponse>> getExpenses(
+            @AuthenticationPrincipal User user,
+            @RequestParam int page,
+            @RequestParam int size,
+            @RequestParam(required = false, defaultValue = "all") String filter,
+            @RequestParam(required = false) String start,
+            @RequestParam(required = false) String end
+    ) {
+        LocalDate customStart = start != null ? LocalDate.parse(start) : null;
+        LocalDate customEnd = end != null ? LocalDate.parse(end) : null;
+
+        var response = expenseService.getExpense(user, page, size, filter, customStart, customEnd);
+        return ResponseEntity.ok(response);
     }
 
     @PostMapping
