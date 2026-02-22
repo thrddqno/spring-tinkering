@@ -47,7 +47,38 @@ Required Header: `Authorization: Bearer <JWT_TOKEN>`
     "total": 1
 }
 ```
+___
+#### Get Expenses by Filtering
 
+`GET /api/expenses?page={n}&size={m}&filter={filter}&start={yyyy-MM-dd}&end={yyyy-MM-dd}`
+
+| Param    | Type | Description |
+|----------|------|-------------|
+| `page`   | int  | Page number |
+| `size`   | int | Items per page |
+| `filter` | string | `week`, `month`, `3months`, `custom` |
+ | `start`  | date | Required if `filter=custom`, `YYYY-MM-DD` |
+| `end`    | date | Required if `filter=custom`, `YYYY-MM-DD` |
+
+**Response Body:**
+```json
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "McDonalds",
+      "amount": 100.0,
+      "expenseDate": "2026-02-22",
+      "categoryId": 1
+    }
+  ],
+  "page": 1,
+  "limit": 10,
+  "total": 6
+}
+```
+    
+___
 #### Create Expense
 
 `POST /api/expenses`
@@ -73,7 +104,7 @@ Required Header: `Authorization: Bearer <JWT_TOKEN>`
   "categoryId": 1
 }
 ```
-
+___
 #### Update Expense
 
 `PUT /api/expenses/{expenseId}`
@@ -99,7 +130,7 @@ Required Header: `Authorization: Bearer <JWT_TOKEN>`
   "categoryId": 1
 }
 ```
-
+___
 #### Delete Expense
 
 `DELETE /api/expenses/{expenseId}`
